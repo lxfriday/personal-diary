@@ -1,0 +1,14 @@
+doctype html
+html(lang='zh-Hant')
+  head
+    include _head
+    include _mixins
+  body(itemscope, itemtype='https://schema.org/WebPage')
+    header(itemscope, itemtype='https://schema.org/WPHeader')
+      include _header
+      .space
+    main(itemscope, itemtype='https://schema.org/Blog')
+      include _content
+    include _scripts
+    script(src="//cdn.bootcss.com/Han/3.3.0/han.min.js") 
+    
