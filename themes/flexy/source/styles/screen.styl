@@ -587,16 +587,16 @@ main
 // ===========================================================================
 // 4. Typography Basics
 // ===========================================================================
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
-  font-family $heading-font;
-  font-weight normal;
-  text-align left;
+main
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    font-family $heading-font;
+    font-weight normal;
+    text-align left;
 
 h1
   font-size 4.5rem
@@ -697,7 +697,6 @@ tt
 pre
   -moz-box-sizing border-box
   box-sizing border-box
-  background #222
   border-radius .3em
   color $white
   font-family $code-font
@@ -705,7 +704,6 @@ pre
   font-weight $code-weight
   margin 1.6em 0
   overflow auto
-  padding 10px
   white-space pre
   width 100%
 
@@ -1020,4 +1018,9 @@ header p {
   margin: 0;
   text-shadow: 0 1px 3px rgba(0,0,0,0.35);
   font-size: 2em;
+}
+
+// han.min.css conflict
+article h1+blockquote, article h1+h2, article h1+h3, article h1+h4, article h1+h5, article h1+h6, article h1+ol, article h1+p, article h1+section>blockquote:first-child, article h1+section>h2:first-child, article h1+section>h3:first-child, article h1+section>h4:first-child, article h1+section>h5:first-child, article h1+section>h6:first-child, article h1+section>ol:first-child, article h1+section>p:first-child, article h1+section>ul:first-child, article h1+ul, article h2+blockquote, article h2+h2, article h2+h3, article h2+h4, article h2+h5, article h2+h6, article h2+ol, article h2+p, article h2+section>blockquote:first-child, article h2+section>h2:first-child, article h2+section>h3:first-child, article h2+section>h4:first-child, article h2+section>h5:first-child, article h2+section>h6:first-child, article h2+section>ol:first-child, article h2+section>p:first-child, article h2+section>ul:first-child, article h2+ul, article h3+blockquote, article h3+h3, article h3+h4, article h3+h5, article h3+h6, article h3+ol, article h3+p, article h3+section>blockquote:first-child, article h3+section>h3:first-child, article h3+section>h4:first-child, article h3+section>h5:first-child, article h3+section>h6:first-child, article h3+section>ol:first-child, article h3+section>p:first-child, article h3+section>ul:first-child, article h3+ul, article h4+blockquote, article h4+h4, article h4+h5, article h4+h6, article h4+ol, article h4+p, article h4+section>blockquote:first-child, article h4+section>h4:first-child, article h4+section>h5:first-child, article h4+section>h6:first-child, article h4+section>ol:first-child, article h4+section>p:first-child, article h4+section>ul:first-child, article h4+ul, article h5+blockquote, article h5+h5, article h5+h6, article h5+ol, article h5+p, article h5+section>blockquote:first-child, article h5+section>h5:first-child, article h5+section>h6:first-child, article h5+section>ol:first-child, article h5+section>p:first-child, article h5+section>ul:first-child, article h5+ul, article h6+blockquote, article h6+h6, article h6+ol, article h6+p, article h6+section>blockquote:first-child, article h6+section>h6:first-child, article h6+section>ol:first-child, article h6+section>p:first-child, article h6+section>ul:first-child, article h6+ul {
+  margin-top: 0;
 }

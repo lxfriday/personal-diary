@@ -8,12 +8,12 @@ subtitle: ''
 description: ''
 keywords:
 author: yunyuv
-language: zh-cn
-timezone: ''
+language: zh-CN
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://diary.lxfriday.xyz
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -45,10 +45,10 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace: ''
-  wrap: true
+  wrap: false
   hljs: true
 prismjs:
   enable: false
