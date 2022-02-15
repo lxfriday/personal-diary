@@ -3,9 +3,9 @@ logo: /images/me.jpg
 keywords: "sjaak van den berg, svdb, bitcoin, crypto, payment, integration, bitcoins, wordpress, betaling, webshop, front end, design, ontwerp, developer"
 pubkey: 13DB CAA1 2633 81A7
 menu:
-  Home: /
-  Articles: /articles
-  About: /about
+  # Home: /
+  # Articles: /articles
+  📺bilibili : https://space.bilibili.com/15445514/
 
 # Content
 excerpt_link: Read more
