@@ -8,7 +8,7 @@ jobs:
       uses: actions/checkout@master
 
     - name: Build and Deploy
-      uses: renzhaosy/hexo-deploy-action@master
+      uses: ApolloZhu/hexo-deploy-action@master
       env:
         PERSONAL_TOKEN: ${{ secrets.GH_TOKEN }}
         PUBLISH_REPOSITORY: lxfriday/personal-diary # The repository the action should deploy to.
