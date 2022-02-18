@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>20220217日记 | 云影同学</title><meta name="description"><meta name="generator" content="云影同学"><meta name="author" content="yunyuv"><meta name="keywords" content="sjaak van den berg, svdb, bitcoin, crypto, payment, integration, bitcoins, wordpress, betaling, webshop, front end, design, ontwerp, developer"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/Han/3.3.0/han.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/highlight.js/9.9.0/styles/gruvbox-dark.min.css"><link rel="stylesheet" type="text/css" href="/styles/screen.css"><link rel="icon" type="image/png" href="/images/favicon-16x16.png"></head><body itemscope itemtype="https://schema.org/WebPage"><header itemscope itemtype="https://schema.org/WPHeader"><a href="/"><img src="/images/me.jpg" alt="云影同学" title="云影同学" class="avatar"></a><h1><a href="/" alt="云影同学" title="云影同学" itemprop="headline">云影同学</a></h1><p itemprop="description"></p><nav itemscope itemtype="https://schema.org/SiteNavigationElement"><ul><li itemprop="name"><a target="_blank" rel="noopener" href="https://space.bilibili.com/15445514/" alt="📺bilibili" title="📺bilibili" itemprop="url">📺bilibili</a></li></ul></nav><div class="space"></div></header><main itemscope itemtype="https://schema.org/Blog"><article class="full"><h1 itemprop="headline">20220217日记</h1><span class="post-meta">Published on<time itemprop="datePublished" datetime="2022-02-17T14:56:02.000Z"> 星期四, 二月 17日 2022 at 22:56</time><br>Last updated on<time itemprop="dateModified" datetime="2022-02-17T14:56:02.000Z"> 星期五, 二月 18日 2022 at 21:35</time></span><h2 id="日内总览"><a href="#日内总览" class="headerlink" title="日内总览"></a>日内总览</h2><ol>
+<li>老金视频一条</li>
+<li><a target="_blank" rel="noopener" href="https://wowjs.uk/">wowjs</a> 和 <a target="_blank" rel="noopener" href="https://michalsnik.github.io/aos/">aos</a>，两者都是针对页面滑动出现缓动动画效果的库，aos 是针对 wowjs 的问题的改进版</li>
+<li>node-sass 安装报错的问题</li>
+</ol>
+<h2 id="wowjs-amp-aos"><a href="#wowjs-amp-aos" class="headerlink" title="wowjs &amp; aos"></a>wowjs &amp; aos</h2><p>类似</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://www.come-future.com/">https://www.come-future.com/</a></li>
+</ol>
+<p>滚动条往下滑的时候内容慢慢地以动画的形式显示出来，很有逼格。以前就觉得这玩意很高大上，今天特意找了找相关的库，就是这两个。</p>
+<p>wowjs 本身依赖 <a target="_blank" rel="noopener" href="https://animate.style/">animate.css</a>，也就是使用了 animate.css 已经设计好的动画效果，wowjs 本身应该就是使用 js 处理滑动检测和控制样式，添加一些 animate.css 的 class。</p>
+<p>aos 不依赖其他库，自身要载入两个包。</p>
+<pre><code class="hljs html">...
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://unpkg.com/aos@2.3.1/dist/aos.css&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> /&gt;</span>
+...
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://unpkg.com/aos@2.3.1/dist/aos.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
+  AOS.init()
+<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+...</code></pre>
+
+<h2 id="node-sass"><a href="#node-sass" class="headerlink" title="node-sass"></a>node-sass</h2><p>这玩意我个人感觉一直都是个谜。</p>
+<p>我之前也不怎么使用 sass，不过一些开源项目倒是经常看到 node-sass。</p>
+<p>今天在安装的时候死活卡在了 node-sass 的安装这个门槛。最后又是谜一样地就安装成功了。</p>
+<p>过程呢大概就是这样。</p>
+<ol>
+<li>出现问题，解决不了，看了看 log，发现是缺少 PYTHON2</li>
+</ol>
+<blockquote>
+<p>好，我下载了 PYTHON2 并且添加到了环境变量里面</p>
+</blockquote>
+<ol start="2">
+<li>安装 PYTHON2 之后继续报错，出的错误里面有一串乱码看不清是什么玩意，但是注意到有个 <strong>msbuild</strong> 相关的东西，反正也不知道是啥，继续百度</li>
+</ol>
+<blockquote>
+<p>网上的解答巨多，不知道谁对谁错，貌似每个人解决问题的办法都不大一样，这特么！！！<br>不过貌似跟 <code>node-gyp</code> 和什么 build 可能有关吧，然后我就在全局安装了 <code>node-gyp</code> 和 <code>windows-build-tools</code></p>
+</blockquote>
+<pre><code class="hljs bash">npm install --global node-gyp
+npm install --global windows-build-tools</code></pre>
+
+<ol start="3">
+<li>安装完上面两个库之后，结果依然是拉了，还是跟 2 里面一样的问题</li>
+</ol>
+<blockquote>
+<p>尝试切换 npm 镜像源，用 yarn、cnpm、pnpm 等安装，都无用<br>删了不知道多少次 node_modules</p>
+</blockquote>
+<ol start="4">
+<li>删除 node_modules，删除 package.json 中的 <code>node-sass</code> 这个依赖，用 pnpm 安装</li>
+</ol>
+<blockquote>
+<p>安装没有报错，这是肯定的，<code>node-sass</code> 都被我删了，你还能怎样<br>然后再次使用 <code>pnpm install node-sass -D</code>，这下安装没有报错<br>我也不知道哪根筋抽了，前面一直出错，反正这下 ok 了</p>
+</blockquote>
+<ol start="5">
+<li>我看了下 <a target="_blank" rel="noopener" href="https://github.com/sass/node-sass"><code>node-sass</code></a> 的 README，发现了一点问题</li>
+</ol>
+<p><img src="https://qiniu1.lxfriday.xyz/blog/f701ff71-92a9-8e9d-5d79-3da4c270ecb9.png" alt="sass-node 版本适配"></p>
+<p>就是说，有时候可能是 Node 版本跟 <code>node-sass</code> 不适配，不过我用的 Node v16 安装的 <code>node-sass</code> v6 貌似也没冲突。</p>
+<hr>
+<p>昨天漏了个点，我还在项目目录下添加了 <code>.npmrc</code>，里面有两行代码：</p>
+<pre><code class="hljs text">sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
+registry=https://registry.npm.taobao.org</code></pre>
+
+
+
+<p><strong>毕!</strong></p>
+</article></main><script src="//cdn.bootcss.com/Han/3.3.0/han.min.js"> </script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"> </script><script src="//cdn.bootcss.com/jquery-backstretch/2.0.4/jquery.backstretch.min.js"> </script><script>$(function() {
+  //- $("header").backstretch("//qiniu1.lxfriday.xyz/blog/backgif1.gif");
+  $("header").backstretch("//qiniu1.lxfriday.xyz/blog/%E5%9B%8D.gif");
+});</script></body></html>
